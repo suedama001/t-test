@@ -1,0 +1,27 @@
+SPSS
+
+Data preparation
+Loading the data
+To load the data into SPSS I used:
+“File” > “Import Data” > “CSV” > “independent_t-test”
+
+Data cleaning
+To clean the data I made sure that there were no missing values using:
+“Analyze” > “Descriptive Statistics” > “Descriptives”
+
+Summary Statistics
+The above instructions also gave me a brief summary of the statistics
+
+Statistical Analysis
+T-test
+To perform my statistical analysis I performed the following:
+“Analyze” > “Compare Means” > “Independent-Samples T test”
+Test variable = “Score” and grouping variable = “Group”
+Click “Define Groups” and specified that Group 1 = 1, and Group 2 = 2
+Click “OK”
+
+Results
+My results showed that there is significant difference between the two groups:
+t=-6.827
+p< .001
+95% Confidence Interval of Difference = [-16.145, -8.141]
