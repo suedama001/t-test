@@ -1,0 +1,110 @@
+RStudio Cloud
+
+Data Preparation
+Loading the data
+First I uploaded my data into RStudio Cloud.
+Using the following code I installed and loaded my data:
+
+install.packages(“readr”)
+library(readr)
+ttest <- read_csv(“independent_t-test.csv”)
+head(ttest)
+
+Data Cleaning
+I used str() and summary() to see the structure of my data and to check for any missing values.
+Then I had to make sure that my Group was a factor so the data analysis could be preformed.
+This was the code I used:
+str(ttest)
+summary(ttest)
+ttest$Group <- as.factor(ttest$Group)
+
+Exploratory Data Analysis
+Summary Statistics
+Using summary() I can see a summary of the data including the minimum, median, mean, max, and the number of groups and subjects in groups
+
+Visualizations
+I decided to make a box plot, histogram, and density plot for my visualizations using ggplot()
+This was the code needed:
+install.packages(“ggplot2)
+library(readr)
+
+Box plot:
+ggplot(data = data_frame, aes(x = group, y = value, fill = group)) +
+  geom_boxplot() +
+  labs(title = "Boxplot of Two Groups",
+       x = "Group",
+       y = "Value")
+
+Histogram:
+ggplot(data = data_frame, aes(x = value, fill = group)) +
+  geom_histogram(alpha = 0.6, position = "identity", bins = 20) +
+  labs(title = "Histogram of Two Groups", 
+       x = "Value",
+       y = "Frequency") +
+  theme_minimal()
+
+Density plot: 
+ggplot(data = data_frame, aes(x = value, fill = group, color = group)) +
+  geom_density(alpha=0.4) +
+  labs(title = "Density Plot of Two Groups",
+       x = "Value",
+       y = "Density") +
+  theme_minimal()
+
+Statistical Analysis
+T-test
+T-test are performed to analyze the difference of means between two groups
+This is the code that was used to perform and display the t-test results:
+
+t_test_result <- t.test(Score ~ Group, data = ttest)
+t_test_result
+
+This is what I got back:
+
+Welch Two Sample t-test
+
+data:  Score by Group
+t = -6.8274, df = 9.3259, p-value = 6.453e-05
+alternative hypothesis: true difference in means between group 1 and group 2 is not equal to 0
+95 percent confidence interval:
+ -16.14490  -8.14081
+sample estimates:
+mean in group 1 mean in group 2 
+       13.85714        26.00000 
+
+Results
+To present the results of the t-test I used the following code:
+t_test_result$p.value
+t_test_result$conf.int
+
+These were the results:
+> t_test_result$p.value
+[1] 6.453493e-05
+> t_test_result$conf.int
+[1] -16.14490  -8.14081
+attr(,"conf.level")
+[1] 0.95
+
+There was a significant difference between the scores of Group 1 and Group 2. (t = -6.8274, p<0.001). 
+The 95% confidence interval for the difference in means was [-16.14, -8.14], suggesting that the true mean difference is likely between -16.14 and -8.14 suggesting that the scores for Group 2 are significantly higher than Group 1’s.
+
+Conclusion
+With these results, I confirm what I obtained from SPSS
+I reject the null hypothesis and support the alternative hypothesis that Group 1 and Group 2 have significant difference.
+
+Reflection
+Through this project I learned how to perform a t-test on RStudio Cloud. This included how to:
+Upload data
+Clean data
+Make visualizations
+Perform t-test
+Interpret my results
+The advantages of using RStudio Cloud are: 
+You can easily obtain graphs as long as you know the code.
+ It is very detailed on the information that it gives you.
+A challenge that I faced were:
+Learning the syntax for the codes
+making sure that the data was in the correct format.
+In the future my goals are:
+To perform a t-test using a bigger data set collected from a real world setting.
+To perform more advanced types of statistical analysis.
