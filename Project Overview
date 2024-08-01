@@ -1,0 +1,54 @@
+Overview
+
+Introduction
+T-test are used to compare the scores of two groups with different independent variables.
+With a t-test, you can find significant differences between means of groups and see if a sales strategy yields more sales on average than another without a sales strategy for example.
+The purpose of this project is to highlight my ability to perform independent sample t-tests in both SPSS and RStudio Cloud.
+
+Scoop
+The data from this study was not gathered through any means, meaning I made up the numbers simply to exemplify how independent sample t-tests function. 
+This comes with the benefit of being able to be apply it in many fields including psychology, and business.
+
+Methodology
+Data can be gathered by using many means including Qualtrix, Prolific, and running participants from an in-person study.
+After data has been gathered, you can clean it using Excel by making sure the data is accurate, has no missing values, no repeated participants, etc. 
+You can also use RStudio to clean the data.
+Cleaning the data is important to get the most accurate analysis possible.
+To analyze data, I will be using SPSS and RStudio Cloud to showcase how I perform a t-test. 
+
+Timeline
+To conduct an analysis you need to following steps
+  Gather data
+  Clean data
+  Analyze data
+  Present your findings
+
+Resources
+To analyze my data, I'll be using SPSS and RStudio Cloud
+I like loading readr, dplyr, and ggplot2 into RStudio Cloud as they helps me read uploaded csv files, perform analyzes, and plot my data.
+Additionally used the help of Chat GPT to teach me the codes necessary and help me with any errors that might pop up.
+
+Outcome
+In an independent samples t-test you should have null hypothesis stating that the difference between the comparison groups will not have any statistical difference between them.
+You can either support or not support your null hypothesis; in most cases you will want the latter.
+By knowing how the groups are different you can make data driven decisions.
+
+Potential Impact
+You can perform a t-test for many real world applications, for example, to compare a group taking a therapeutic drug with a group taking no therapeutic drug.
+It can also be used for businesses comparing how much customers spend when helped by a sales associate and when they are not helped by a sales associate.
+It can potentially be used by managers to see which leadership style produces the best work environment.
+
+Risk management
+It is always important to protect data as it can contain personal, private, and sensitive information.
+Even if no real data is being used, the importance of protecting data should not be forgotten.
+
+Conclusion
+This project will help me showcase my skills in both SPSS and RStudio Cloud.
+It can also be used as a reference to how and why independent samples t-tests are performed. 
+Since t-tests can be very useful in a variety of fields, how they can be applied to real world scenarios will be discussed in further a section. 
+
+Hypotheses
+Null Hypothesis: 
+  Group 1 and Group 2 will have no significant statistical difference
+Alternate Hypothesis:
+  Group 1 and Group 2 will have significant statistical difference.
